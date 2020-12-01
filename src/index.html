@@ -1,0 +1,149 @@
+<!-- Aqui va nuestra Landing -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>The Gamers</title>
+</head>
+
+<body>
+  <!-- Header -> lista de pantallas por Js -->
+  <header class="navbar-fixed-top cbp-af-header container-header">
+    <nav class="container-nav">
+      <div class="container-nav__logo">
+        <a href=""><i class="fas fa-gamepad icon-style"></i></a>
+
+      </div>
+      <div class="container-nav__btns">
+        <button class="container-nav__btns__btn" id="btnHome">Home</button>
+        <button class="container-nav__btns__btn" id="btnList">Game store</button>
+        <button class="container-nav__btns__btn" id="btnSearch">Search</button>
+        <button class="container-nav__btns__btn" id="btnAbout">About us</button>
+        <button class="container-nav__btns__btn" id="btnShopping"><i class="fas fa-shopping-cart"></i></button>
+
+      </div>
+    </nav>
+  </header>
+  <div class="container-aside">
+    <aside class="container-aside__sidebar" id="sideBar">
+      <h5 class="container-aside__sidebar__title" id="asideTitle"></h5>
+      <!-- TODOS LOS ANCHOR DEL ASIDE VAN AQUI -->
+    </aside>
+  </div>
+
+  <main class="main" id="main">
+    <section class="section__welcome" id="home">
+      <div class="section__welcome__display">
+
+        <div class="section__welcome-title">
+          <h1 class="section__welcome-title__styles">YA DISPONIBLE EN LA TIENDA</h1>
+        </div>
+
+        <div class="section__welcome__video">
+          <p><a class="section__welcome__video__style-a" href="https://www.youtube.com/watch?v=VSLSvEjDm5s">GO TO THE
+              TRAILER</a></p>
+          <a href="https://www.youtube.com/watch?v=VSLSvEjDm5s">
+            <img class="" src="src/app/assets/image-video-principal.png"></a>
+        </div>
+      </div>
+    </section>
+    <section class="section__list hidden" id="list">
+
+      <ul class="list__ul row" id="listUl"></ul>
+    </section>
+    <section class="section__search hidden" id="search">
+      <div class="container" id="container">
+        <div class="container__left">
+          <img class="container__left__gif" src="src/app/assets/gif-minions.gif" alt="minions">
+        </div>
+        <div class="container__right__form">
+          <form class="container-form">
+            <label for="inputSearch"></label>
+            <input type="text" name="input-form" id="inputSearch">
+            <button class="container-form__btn" type="button" id="submit">Search game</button>
+          </form>
+        </div>
+        <hr class="container-hr">
+        <div id="search-result" class="container__search-result">
+          <h4 id='h4'></h4>
+          <img src="" id="img">
+          <p id="p"></p>
+          <p id="p2"></p>
+          <button class="hidden" id="button" type="button"></button>
+        </div>
+      </div>
+    </section>
+    <section class="section__about hidden" id="about">
+      <div class="section__about__btns">
+        <button class="section__about__btns__btn previous" id="btnPrevious"><i
+            class="fas fa-angle-double-left"></i></button>
+        <button class="section__about__btns__btn next" id="btnNext"><i class="fas fa-angle-double-right"></i></button>
+      </div>
+
+      <div class="section__about__us">
+        <h4 id="h4-about"></h4>
+        <img id="imagen-about" src="">
+        <p id="p-about"></p>
+      </div>
+    </section>
+
+    <section class="section__shopping" id="shopping">
+      <div class="section__shopping__btn">
+        <!-- <button class="section__shopping__btn-shopping" id="btnShopping"><i class="fas fa-shopping-cart"></i></button> -->
+      </div>
+      <div class="section_shopping__show">
+        <h4 id="h4-shopping"></h4>
+        <ul class="list__ul col-lg-4" id="listCart"></ul>
+        <img id="imagen-shopping" src="">
+        <p id="p-shopping"></p>
+      </div>
+    </section>
+
+    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>YA ESTAS EN ESTA VENTANA, ¡DISFRUTA!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" id="buttonId" class="btn btn-info btn-lg hidden" data-toggle="modal"
+      data-target="#myModal">Open Modal</button>
+  </main>
+  <!-- Mínimo Redes Sociales -->
+  <footer class="footer__redes">
+    <div class="container__title">
+      <h3 class="container__title__style">Síguenos en redes sociales</h3>
+      <p>Para ver que no te pierdes nada al minuto.</p>
+      <p>EVENTOS, NUEVAS PROMOS, VIDEOS EN DIRECTO DE TUS MEJORES JUEGOS, Y MUCHO MÁS!!</p>
+    </div>
+    <div class="container__redes">
+      <a class="container__redes__item" href="https://www.instagram.com/?hl=es"><span
+          class="fab fa-instagram container__redes__item__link">INSTAGRAM</span></a>
+      <a class="container__redes__item" href="https://twitter.com/explore"><span
+          class="fab fa-twitter container__redes__item__link">TWITTER</span></a>
+      <a class="container__redes__item"
+        href="https://www.twitch.tv/directory/game/The%20Last%20of%20Us%20Part%20II"><span
+          class="fab fa-twitch container__redes__item__link">TWITCH</span></a>
+    </div>
+
+  </footer>
+</body>
+
+</html>
